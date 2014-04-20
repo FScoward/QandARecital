@@ -9,6 +9,7 @@ GET     /project/:projectID         controllers.Question.index(projectID: Int)
 
 POST    /makeProject                controllers.Project.makeProject
 POST    /deleteProject              controllers.Project.deleteProject
+POST    /makeQuestion               controllers.Question.makeQuestion
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)

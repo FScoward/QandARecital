@@ -1,11 +1,19 @@
 
 @main("Welcome to Play") {
+  
+  @* パンくずリスト *@
+  <ol class="breadcrumb">
+    <li><a href="/">Home</a></li>
+    <li><a href="@routes.Project.index()">Project</a></li>
+    <li class="active">Question</li>
+  </ol>
+  
   question
   
   <br/>
   create QA
   
-  <form method="POST" action="/" class="form-horizontal" role="form">
+  <form method="POST" action="@routes.Question.makeQuestion()" class="form-horizontal" role="form">
     
     <div class="form-group">
       <label for="from" class="col-sm-2 control-label">From</label>
@@ -47,6 +55,9 @@
         </select>
       </div>
     </div>
+    
+    <!--<input type="hidden" name="projectId" value=""-->
+    
 
     <div class="form-group">
       <div class="col-sm-offset-2 col-sm-10">
@@ -55,5 +66,8 @@
       </div>
     </div>
   </form>
+  
+  <hr>
+  Questions And Answers
   
 }

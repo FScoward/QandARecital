@@ -1,7 +1,15 @@
 @(projectList: List[models.database.Project])(implicit flash: Flash)
 @main("Projects") {
-  
-  Create New Project
+
+  @* パンくずリスト *@
+  <ol class="breadcrumb">
+    <li><a href="/">Home</a></li>
+    <li class="active">Project</li>
+  </ol>
+
+
+
+Create New Project
   <form method="POST" action="/makeProject" class="form-horizontal" role="form">
     
     <div class="form-group">
@@ -34,7 +42,7 @@
   
   
   @flash.get("message").map { message =>
-    <p class="bg-success">success</p>
+    <p class="bg-success">@message</p>
   }
   
   Your Project List
