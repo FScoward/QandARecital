@@ -26,9 +26,10 @@ CREATE TABLE Question (
     project_id bigint(20),
     PRIMARY KEY (question_id),
     FOREIGN KEY (project_id)
-      REFERENCES Project(project_id),
-    FOREIGN KEY (questioner)
-      REFERENCES Member(member_id)
+      REFERENCES Project(project_id)
+--      ,
+--    FOREIGN KEY (questioner)
+--      REFERENCES Member(member_id)
 );
 
 
